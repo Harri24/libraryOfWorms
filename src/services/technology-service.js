@@ -1,12 +1,31 @@
 const databaseService = require('./database-service');
 
 
+
+// module.exports = {
+//     getAllBooks: getAllBooks,
+//     addBooks: addBooks,
+//     deleteBooks: deleteBooks,
+//     getAllAuthors: getAllAuthors,
+//     addAuthors: addAuthors,
+//     deleteAuthors: deleteAuthors,
+//     getAllMembers: getAllMembers,
+//     addMembers: addMembers,
+//     deleteMembers: deleteMembers,
+//     getBooksbyGenre: getBooksbyGenre,
+//     getBooksbyAuthor: getBooksbyAuthor,
+//     addBookCopy: addBookCopy,
+//     obtainIB: obtainID,
+//     allocateGenres: allocateGenres,
+//     allocateAuthor: allocateAuthor,
+//     bookOnLoan: bookOnLoan
+// };
+
 module.exports = {
     getAllTechnologies: getAllTechnologies,
     addTechnology: addTechnology,
     deleteTechnology: deleteTechnology
 };
-
 
 function getAllTechnologies(callback) {
     const connection = databaseService.getConnection();
@@ -43,5 +62,5 @@ function deleteTechnology(technologyId, callback) {
         if (error) throw error;
         callback();
     });
-}
 
+};

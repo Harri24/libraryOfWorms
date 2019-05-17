@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>Bookish - List of Books</title>
+
+        <link rel="stylesheet" href="/styles/general.css"/>
+        <link rel="stylesheet" href="/styles/navbar.css"/>
+        <link rel="stylesheet" href="/styles/about.css"/>
+    </head>
+
+    <body>
+
+        <% include fragments/navbar.ejs %>
+
+       <h1>This is the List of Books avaliable here at the library of Worms</h1>
+       <div class="technology-list">
+        <% books.forEach(function(book) { %>
+            <div class="technology">
+                <p><%=book.NAME%></p>
+                <p><%=book.PUBLISH_DATE%></p>
+                <p><%=book.LANGUAGE%></p>
+            </div>
+        <% }); %>
+    </div>
+
+
+    </body>
+
+
+</html>

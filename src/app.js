@@ -3,7 +3,7 @@ const express = require('express');
 
 const indexController = require('./controllers/index-controller');
 const aboutUsController = require('./controllers/about-us-controller.js');
-
+const bookController = require('./controllers/book-list-controller.js');
 
 // SETUP EXPRESS
 const app = express();
@@ -22,6 +22,7 @@ const port = 3000;
 
 indexController.register(app);
 aboutUsController.register(app);
+bookController.register(app);
 
 
 
